@@ -1,0 +1,31 @@
+{
+  "authors": [
+    {
+      "name": "David J Eddy",
+      "email": "me@davidjeddy.com",
+      "homepage": "https://github.com/davidjeddy/codeception-hello-module",
+      "role": "Developer"
+    }
+  ],
+  "description": "hello module for codeception",
+  "keywords": [
+    "codeception",
+    "module"
+  ],
+  "license": "BSD-3-Clause",
+  "name": "davidjeddy/codeception-hello-module",
+  "autoload": {
+    "psr-4": {
+      "codeception\\Module\\": "/src"
+    }
+  },
+  "require": {
+    "php"                    : "^7",
+    "codeception/codeception": "~2"
+  },
+  "support": {
+    "issues": "https://github.com/davidjeddy/codeception-hello-module/issues?state=open",
+    "source": "https://github.com/davidjeddy/codeception-hello-module/issues"
+  },
+  "type": "module"
+}

@@ -40,7 +40,7 @@ class_name: Acceptancehelloer
 modules:
     enabled:
         ...
-        - helloModule
+        - Hello
         ...
 ```
 

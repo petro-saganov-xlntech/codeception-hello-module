@@ -11,11 +11,12 @@ use Codeception\Module;
  */
 class Hello extends Module
 {
-    /**
-     * @param string $name
-     */
-    public function greet(string $name) {
 
+    /**
+     * @param $name
+     */
+    public function greet($name)
+    {
         $this->debug("Hello {$name}!");
     }
 }

@@ -3,7 +3,7 @@
 Module to interface with a FreeRADIUS server
 
 # Badges
-[![Lahello Stable Version](https://poser.pugx.org/davidjeddy/codeception-hello-module/v/stable?format=flat-square)](https://packagist.org/packages/davidjeddy/codeception-hello-module)
+[![Latest Stable Version](https://poser.pugx.org/davidjeddy/codeception-hello-module/v/stable?format=flat-square)](https://packagist.org/packages/davidjeddy/codeception-hello-module)
 [![Total Downloads](https://poser.pugx.org/davidjeddy/codeception-hello-module/downloads)](https://packagist.org/packages/davidjeddy/codeception-hello-module)
 [![Lahello Unstable Version](https://poser.pugx.org/davidjeddy/codeception-hello-module/v/unstable?format=flat-square)](https://packagist.org/packages/davidjeddy/codeception-hello-module)
 [![License](https://poser.pugx.org/davidjeddy/codeception-hello-module/license?format=flat-square)](https://packagist.org/packages/davidjeddy/codeception-hello-module)
@@ -11,7 +11,7 @@ Module to interface with a FreeRADIUS server
 [![Daily Downloads](https://poser.pugx.org/davidjeddy/codeception-hello-module/d/daily?format=flat-square)](https://packagist.org/packages/davidjeddy/codeception-hello-module)
 [![composer.lock](https://poser.pugx.org/davidjeddy/codeception-hello-module/composerlock?format=flat-square)](https://packagist.org/packages/davidjeddy/codeception-hello-module)
 
-#Add Sensiolabs quality here
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/847f7ced-982c-4b03-981f-a06bf11e2303/big.png)](https://insight.sensiolabs.com/projects/847f7ced-982c-4b03-981f-a06bf11e2303)
 
 # REQUIREMENTS
 PHP 7+

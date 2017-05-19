@@ -44,7 +44,7 @@ modules:
         ...
 ```
 
-Rebuild codeception, typically `codeception build`
-Add functionality to hello Cept/Cest
-Run hello
-Enjoy
+ - Rebuild codeception, typically `codeception build`
+ - Add `$I->greet('NAME');` to a Cept/Cest test class
+ - Run test suite
+ - Enjoy

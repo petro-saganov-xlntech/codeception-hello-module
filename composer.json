@@ -16,7 +16,7 @@
   "name": "davidjeddy/codeception-hello-module",
   "autoload": {
     "psr-4": {
-      "codeception\\Module\\": "/src"
+      "Codeception\\Module\\": "src"
     }
   },
   "require": {

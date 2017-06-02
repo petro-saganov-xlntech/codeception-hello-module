@@ -14,13 +14,11 @@ Module to interface with a FreeRADIUS server
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/847f7ced-982c-4b03-981f-a06bf11e2303/big.png)](https://insight.sensiolabs.com/projects/847f7ced-982c-4b03-981f-a06bf11e2303)
 
 # REQUIREMENTS
-PHP 7+
+PHP ^5.6
 
-MySQL 5.5+
+Composer ^1.x
 
-Composer
-
-Codeception
+Codeception ^2.3
 
 # Credit
 The majority of this package is based off an article by Jordan Eldredge:

@@ -19,4 +19,13 @@ class Hello extends Module
     {
         $this->debug("Hello {$name}!");
     }
+
+    /**
+     * @param $name
+     * @param $surname
+     */
+    public function greetWithSurname($name, $surname)
+    {
+        $this->debug("Hello {$name} {$surname}!");
+    }
 }

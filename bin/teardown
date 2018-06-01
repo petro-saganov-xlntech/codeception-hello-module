@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+echo "I've ben run before App destroy!!!"

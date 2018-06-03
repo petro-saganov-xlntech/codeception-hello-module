@@ -1,8 +1,16 @@
 #!/usr/bin/env bash
 
+maintenance(){
+[ $1 == on ] && status=true || status=false
+curl -n -X PATCH https://api.heroku.com/apps/mighty-mesa-44488 \
+  -d "{ \"maintenance\": $status}" \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/vnd.heroku+json; version=3"
+}
+
 echo "I've been run during release!!!"
 echo "Starting some long process..."
-heroku maintenance:on
+maintenance on
 echo "Enabing maintenance mode"
 echo "Waiting till 10..."
 for i in {1..10}
@@ -10,7 +18,8 @@ do
 	sleep 5s
 	echo -n "$i."
 done
-heroku maintenance:off
+maintenance off
 echo "Maintenance mode has disabled"
 echo
 echo "All done. We gonna go forward..."
+

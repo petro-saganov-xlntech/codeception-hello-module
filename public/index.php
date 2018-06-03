@@ -1,3 +1,3 @@
 <?php
 
-echo "<h2>Release v10</h2>"
+echo "<h2>Release v10</h2>";

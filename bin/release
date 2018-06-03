@@ -2,11 +2,13 @@
 
 echo "I've been run during release!!!"
 echo "Starting some long process..."
-echo "Waiting..."
+echo "Waiting till 10..."
 for i in {1..10}
 do
-	echo -n "."
 	sleep 5s
+	echo -n "$i."
 done
 echo
 echo "All done. We gonna go forward..."
+echo "But shit happened"
+exit 1

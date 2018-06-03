@@ -10,5 +10,3 @@ do
 done
 echo
 echo "All done. We gonna go forward..."
-echo "But shit happened"
-exit 1

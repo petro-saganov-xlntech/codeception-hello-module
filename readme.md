@@ -1,3 +1,5 @@
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 # codeception-hello-module
 
 Module to interface with a FreeRADIUS server

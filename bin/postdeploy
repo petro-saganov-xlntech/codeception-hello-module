@@ -12,7 +12,7 @@ curl -s -n -X PATCH https://api.heroku.com/apps/mighty-mesa-44488 \
 }
 
 mkdir postdeploy
-date > postdeploy/posteploy.txt
+date > postdeploy/postdeploy.txt
 
 maintenance off "$api_oauth"
 echo "Maintenance mode has disabled"

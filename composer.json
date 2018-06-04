@@ -30,8 +30,8 @@
   "type": "module",
   "scripts": {
     "warmup": [
-      "bash -c 'echo Loading configs...'",
-      "bash -c 'echo Loading routes...'"
+      "bash -c 'echo Loading configs...' && mkdir config && date > config/config.ini",
+      "bash -c 'echo Loading routes...' && date > config/routes.txt"
     ]
   }
 }

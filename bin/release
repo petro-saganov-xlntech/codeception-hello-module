@@ -16,16 +16,16 @@ echo "Below there are environment variables:"
 env
 [ -z "$api_oauth" ] && echo "[Error]: OAuth variable wasn't set" && exit 1
 echo "Starting some long process..."
-maintenance on "$api_oauth"
 echo "Enabing maintenance mode"
+maintenance on "$api_oauth"
 echo "Waiting till 10..."
-for i in {1..10}
+for i in {1..5}
 do
 	sleep 5s
 	echo -n "$i."
 done
-maintenance off "$api_oauth"
-echo "Maintenance mode has disabled"
+#maintenance off "$api_oauth"
+#echo "Maintenance mode has disabled"
 echo
-echo "All done. We gonna go forward..."
+echo "All done. We gonna go forward to release..."
 

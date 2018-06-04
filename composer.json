@@ -29,6 +29,7 @@
   "type": "module",
   "scripts": {
     "post-install-cmd": [
+      "composer update --dev",
       "php vendor/bin/codecept run"
     ],
     "warmup": [

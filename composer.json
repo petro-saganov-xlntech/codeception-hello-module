@@ -20,8 +20,7 @@
     }
   },
   "require": {
-    "php"                    : "^7",
-    "codeception/codeception": "~2"
+    "php"                    : "^7"
   },
   "support": {
     "issues": "https://github.com/davidjeddy/codeception-hello-module/issues?state=open",
@@ -29,9 +28,15 @@
   },
   "type": "module",
   "scripts": {
+    "post-install-cmd": [
+      "php vendor/bin/codecept run"
+    ],
     "warmup": [
       "bash -c 'echo Loading configs...' && mkdir config && date > config/config.ini",
       "bash -c 'echo Loading routes...' && date > config/routes.txt"
     ]
+  },
+  "require-dev": {
+    "codeception/codeception": "^2.4"
   }
 }

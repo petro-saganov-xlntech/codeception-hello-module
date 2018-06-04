@@ -6,7 +6,7 @@ curl -n -X PATCH https://api.heroku.com/apps/mighty-mesa-44488 \
   -d "{ \"maintenance\": $status}" \
   -H "Content-Type: application/json" \
   -H "Accept: application/vnd.heroku+json; version=3" \
-  -H "Authorization: Bearer ea7c33bb-a873-4bf1-9219-23b47b871e83"
+  -H "Authorization: Bearer {$api_oauth}"
 }
 
 echo "I've been run during release!!!"

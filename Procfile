@@ -1,2 +1,2 @@
 release: bin/release
-web: vendor/bin/heroku-php-nginx public/
+web: composer warmup && bin/postdeploy && vendor/bin/heroku-php-nginx public/

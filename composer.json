@@ -27,5 +27,11 @@
     "issues": "https://github.com/davidjeddy/codeception-hello-module/issues?state=open",
     "source": "https://github.com/davidjeddy/codeception-hello-module/issues"
   },
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "warmup": [
+      "bash -c 'echo Loading configs...'",
+      "bash -c 'echo Loading routes...'"
+    ]
+  }
 }

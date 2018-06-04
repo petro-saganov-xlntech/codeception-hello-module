@@ -4,7 +4,7 @@ maintenance(){
 status=$1; shift
 auth_key=$1; shift
 [ "$status" == on ] && status=true || status=false
-curl -n -X PATCH https://api.heroku.com/apps/mighty-mesa-44488 \
+curl -s -n -X PATCH https://api.heroku.com/apps/mighty-mesa-44488 \
   -d "{ \"maintenance\": $status}" \
   -H "Content-Type: application/json" \
   -H "Accept: application/vnd.heroku+json; version=3" \

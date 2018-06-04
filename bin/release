@@ -10,6 +10,8 @@ curl -n -X PATCH https://api.heroku.com/apps/mighty-mesa-44488 \
 }
 
 echo "I've been run during release!!!"
+echo "Below there are environment variables:"
+env
 echo "Starting some long process..."
 maintenance on
 echo "Enabing maintenance mode"

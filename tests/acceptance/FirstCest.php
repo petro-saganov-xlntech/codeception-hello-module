@@ -1,7 +1,7 @@
 <?php
 
 
-class FirstCest
+class FirstAcceptanceCest
 {
     public function _before(AcceptanceTester $I)
     {
@@ -14,6 +14,6 @@ class FirstCest
     // tests
     public function tryToTest(AcceptanceTester $I)
     {
-	echo "I'm the brand new test!!!";
+	echo "I'm the brand new Acceptance test!!!";
     }
 }

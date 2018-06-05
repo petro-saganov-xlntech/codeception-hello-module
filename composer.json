@@ -28,6 +28,10 @@
   },
   "type": "module",
   "scripts": {
+    "post-install-cmd": [
+      "composer update --dev",
+      "php vendor/bin/codecept run"
+    ],
     "warmup": [
       "bash -c 'echo Loading configs...' && mkdir config && date > config/config.ini",
       "bash -c 'echo Loading routes...' && date > config/routes.txt"

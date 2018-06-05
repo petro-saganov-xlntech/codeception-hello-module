@@ -16,4 +16,3 @@ date > postdeploy/postdeploy.txt
 
 maintenance off "$api_oauth"
 echo "Maintenance mode has disabled"
-

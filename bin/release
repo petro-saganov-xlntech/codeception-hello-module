@@ -4,21 +4,27 @@ maintenance(){
 status=$1; shift
 auth_key=$1; shift
 [ "$status" == on ] && status=true || status=false
-curl -s -n -X PATCH https://api.heroku.com/apps/mighty-mesa-44488 \
+curl -s -i -X PATCH https://api.heroku.com/apps/mighty-mesa-44488 \
   -d "{ \"maintenance\": $status}" \
   -H "Content-Type: application/json" \
   -H "Accept: application/vnd.heroku+json; version=3" \
-  -H "Authorization: Bearer $auth_key"
+  -H "Authorization: Bearer $auth_key" | grep 'HTTP/1.1 200 OK'
+if [ $? -eq 0 ]; then
+  echo "Maintenance mode switch $status"
+else
+  echo "Unable to switch maintenance mode"
+  return 1
+fi
 }
 
+main(){
 echo "I've been run during release!!!"
 echo "Below there are environment variables:"
 env
-[ -z "$api_oauth" ] && echo "[Error]: OAuth variable wasn't set" && exit 1
 echo "Starting some long process..."
 echo "Enabing maintenance mode"
 maintenance on "$api_oauth"
-echo "Waiting till 10..."
+echo "Waiting till 5..."
 for i in {1..5}
 do
 	sleep 5s
@@ -28,4 +34,7 @@ done
 #echo "Maintenance mode has disabled"
 echo
 echo "All done. We gonna go forward to release..."
+}
 
+[ -z "$api_oauth" ] && echo "[Error]: OAuth variable wasn't set" && exit 1
+main || maintenance off "$api_oauth"

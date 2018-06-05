@@ -20,8 +20,7 @@
     }
   },
   "require": {
-    "php"                    : "^7",
-    "ext-mbstring"           : "*"
+    "php"                    : "^7"
   },
   "support": {
     "issues": "https://github.com/davidjeddy/codeception-hello-module/issues?state=open",
@@ -35,6 +34,7 @@
     ]
   },
   "require-dev": {
+    "ext-mbstring"           : "*",
     "codeception/codeception": "^2.3"
   }
 }

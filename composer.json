@@ -20,6 +20,7 @@
     }
   },
   "require": {
+    "ext-mbstring"           : "*",
     "php"                    : "^7"
   },
   "support": {
@@ -38,7 +39,6 @@
     ]
   },
   "require-dev": {
-    "ext-mbstring"           : "*",
     "codeception/codeception": "^2.3"
   }
 }

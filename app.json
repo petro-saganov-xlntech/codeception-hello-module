@@ -13,5 +13,12 @@
   ],
   "buildpacks": [
 
-  ]
+  ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "bash -c 'echo GO...GO...GO...'"
+      }
+    }
+  }
 }

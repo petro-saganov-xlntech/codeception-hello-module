@@ -22,19 +22,16 @@ echo "I've been run during release!!!"
 echo "Below there are environment variables:"
 env
 echo "Starting some long process..."
-echo "Enabing maintenance mode"
-maintenance on "$api_oauth"
 echo "Waiting till 5..."
 for i in {1..5}
 do
 	sleep 5s
 	echo -n "$i."
 done
-#maintenance off "$api_oauth"
-#echo "Maintenance mode has disabled"
 echo
 echo "All done. We gonna go forward to release..."
 }
 
 [ -z "$api_oauth" ] && echo "[Error]: OAuth variable wasn't set" && exit 1
+#maintenance on "$api_oauth"
 main || maintenance off "$api_oauth"

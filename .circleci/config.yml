@@ -48,13 +48,6 @@ jobs:
     docker:
       - image: buildpack-deps:trusty
     steps:
-      - run:
-         name: Install PHP libzip-dev
-         command: sudo apt-get install -y libzip-dev
-
-      - run:
-         name: Install PHP zip
-         command: sudo docker-php-ext-install zip
       - checkout
       - run:
           name: Deploy Master to Heroku

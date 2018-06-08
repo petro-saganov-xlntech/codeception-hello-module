@@ -43,3 +43,22 @@ jobs:
       # run tests!i
       - run: vendor/bin/codecept build
       - run: vendor/bin/codecept run
+
+  deployment:
+    staging:
+      commands:
+        - |
+          cat >~/.netrc <<EOF
+          machine api.heroku.com
+            login $HEROKU_EMAIL
+            password $HEROKU_TOKEN
+          machine git.heroku.com
+            login $HEROKU_EMAIL
+            password $HEROKU_TOKEN
+          EOF
+        - chmod 600 ~/.netrc # Heroku cli complains about permissions without this
+        - heroku maintenance:on --app mighty-mesa-44488
+        - heroku scale worker=0 --app mighty-mesa-44488
+        - git push git@heroku.com:mighty-mesa-44488.git $CIRCLE_SHA1:refs/heads/master
+        - heroku scale worker=1 --app mighty-mesa-44488
+        - heroku maintenance:off --app mighty-mesa-44488

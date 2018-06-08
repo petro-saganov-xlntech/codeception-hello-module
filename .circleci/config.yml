@@ -18,6 +18,7 @@ jobs:
 
     steps:
       - checkout
+      - run: sudo docker-php-ext-install zip
 
       # Download and cache dependencies
       - restore_cache:
@@ -33,5 +34,6 @@ jobs:
             - ./vendor
           key: v1-dependencies-{{ checksum "composer.json" }}
         
-      # run tests!
-      - run: php vendor/bin/codecept run 
+      # run tests!i
+      - run: vendor/bin/codecept build
+      - run: vendor/bin/codecept run

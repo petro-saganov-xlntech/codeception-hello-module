@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+maintenance(){
+  local switch=$1; shift
+  local app=$1; shift
+  local auth_key=$1; shift
+  [ "$switch" == on ] && status=true || status=false
+  curl -s -i -X PATCH https://api.heroku.com/apps/$app \
+    -d "{ \"maintenance\": $status}" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/vnd.heroku+json; version=3" \
+    -H "Authorization: Bearer $auth_key" | grep 'HTTP/1.1 200 OK'
+  if [ $? -eq 0 ]; then
+    echo "Maintenance mode switch $switch"
+  else
+    echo "Unable to switch $switch maintenance mode"
+    return 1
+  fi
+}
+
+status=$1; shift
+app=$1; shift
+api_oauth=$1; shift
+
+[ -z "$api_oauth" ] && echo "[Error]: OAuth variable wasn't set" && exit 1
+maintenance $status $app "$api_oauth"

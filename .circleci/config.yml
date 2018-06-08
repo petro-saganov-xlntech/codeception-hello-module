@@ -52,7 +52,7 @@ jobs:
       - run:
           name: Maintenance On
           command: |
-            heroku maintenance:on --app $HEROKU_APP_NAME
+            bin/maintenance on $HEROKU_APP_NAME
       - run:
           name: Deploy Master to Heroku
           command: |
@@ -60,7 +60,7 @@ jobs:
       - run:
           name: Maintenance Off
           command: |
-            heroku maintenance:off --app $HEROKU_APP_NAME
+            bin/maintenance off $HEROKU_APP_NAME
 
 workflows:
   version: 2

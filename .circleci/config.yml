@@ -52,7 +52,7 @@ jobs:
       - run:
           name: Maintenance On
           command: |
-            bin/maintenance on $HEROKU_APP_NAME
+            bin/maintenance on $HEROKU_APP_NAME $heroku_api_oauth
       - run:
           name: Deploy Master to Heroku
           command: |
@@ -60,7 +60,7 @@ jobs:
       - run:
           name: Maintenance Off
           command: |
-            bin/maintenance off $HEROKU_APP_NAME
+            bin/maintenance off $HEROKU_APP_NAME $heroku_api_oauth
 
 workflows:
   version: 2
